@@ -3,7 +3,7 @@
 apt update
 apt upgrade -y
 
-# Install ALL Build and Development Packages
+# Install Build and Development Packages
 apt install -y build-essential curl
 
 # Network Security
