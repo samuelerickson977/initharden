@@ -43,12 +43,6 @@ sudo cat sysctl-baseline.conf >> /etc/sysctl.conf
 sudo cat sysctl.d/network.conf >> /etc/sysctl.conf
 sudo sysctl -p
 
-echo "Enter the desired value kernel.yama.ptrace_scope. Use 3 if you do not require debugging, or select 1 if you require debuggin tools (such as gdb): "
-read ptrace_scope
-sudo echo "kernel.yama.ptrace_scope=$ptrace_scope" >> /etc/sysctl.conf
-
-sudo sysctl -p
-
 
 # Apparmor
 sudo apt install -y apparmor-profiles apparmor-profiles-extra
