@@ -63,7 +63,7 @@ mv /home/$username/user.js /home/$username/.mozilla/firefox/*.default-release
 
 # Entropy
 sudo apt install -y rng-tools jitterentropy-rngd
-sudo systemctl enable --now jitterentropy-rngd
+sudo systemctl enable --now jitterentropy
 
 # Filesystem and Integrity Monitoring
 sudo apt install -y sxid
