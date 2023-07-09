@@ -51,13 +51,12 @@ echo "session optional     pam_apparmor.so order=user,group,default" | sudo tee 
 sudo apparmor_parser -r -T -W /etc/apparmor.d/pam_binaries /etc/apparmor.d/pam_roles
 
 # Hardened Firefox user.js
-echo "Enter the name of the user to install a hardened user.js for firefox for: "
-read username
-
-wget -O /home/$username/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
-chown $username:$username /home/$username/user.js
-cp /home/$username/user.js /home/$username/.mozilla/firefox/*.default
-mv /home/$username/user.js /home/$username/.mozilla/firefox/*.default-release
+if [ $USER != "root" ]; then
+	wget -O /home/$USER/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
+	chown $USER:$USER /home/$USER/user.js
+	cp /home/$USER/user.js /home/$USER/.mozilla/firefox/*.default
+	mv /home/$USER/user.js /home/$USER/.mozilla/firefox/*.default-release
+fi
 
 
 # Entropy
