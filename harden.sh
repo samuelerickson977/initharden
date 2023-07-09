@@ -40,7 +40,6 @@ sudo systemctl enable clamav-freshclam --now
 
 # Kernel Security
 cat sysctl-baseline.conf | sudo tee -a /etc/sysctl.conf
-cat sysctl.d/network.conf | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
 
