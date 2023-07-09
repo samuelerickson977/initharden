@@ -1,6 +1,12 @@
 # initharden
 ## A hardening script for new Ubuntu x86-64 installations
 
+### Description
+initharden is a project aimed at quickly hardening new Debian flavor 
+x86-64 installations. One can quickly harden their new OS install
+by running the `harden.sh` and adding the recommended kernel command
+line parameters to grub.
+
 ### Quick Start
 Run the following commands to get quickly started:
 ```bash
