@@ -52,10 +52,10 @@ sudo apparmor_parser -r -T -W /etc/apparmor.d/pam_binaries /etc/apparmor.d/pam_r
 
 # Hardened Firefox user.js
 if [ $USER != "root" ]; then
-	wget -O /home/$USER/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
-	chown $USER:$USER /home/$USER/user.js
-	cp /home/$USER/user.js /home/$USER/.mozilla/firefox/*.default
-	mv /home/$USER/user.js /home/$USER/.mozilla/firefox/*.default-release
+	wget -O $HOME/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
+	chown $USER:$USER $HOME/user.js
+	cp $HOME/user.js $HOME/.mozilla/firefox/*.default
+	mv $HOME/user.js $HOME/.mozilla/firefox/*.default-release
 fi
 
 
