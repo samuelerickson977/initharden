@@ -51,12 +51,10 @@ echo "session optional     pam_apparmor.so order=user,group,default" | sudo tee 
 sudo apparmor_parser -r -T -W /etc/apparmor.d/pam_binaries /etc/apparmor.d/pam_roles
 
 # Hardened Firefox user.js
-if [ $USER != "root" ]; then
-	wget -O $HOME/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
-	chown $USER:$USER $HOME/user.js
-	cp $HOME/user.js $HOME/.mozilla/firefox/*.default
-	mv $HOME/user.js $HOME/.mozilla/firefox/*.default-release
-fi
+wget -O "$HOME"/user.js https://raw.githubusercontent.com/arkenfox/user.js/master/user.js
+chown "$USER":"$USER" "$HOME"/user.js
+cp "$HOME"/user.js "$HOME"/.mozilla/firefox/*.default
+mv "$HOME"/user.js "$HOME"/.mozilla/firefox/*.default-release
 
 
 # Entropy
