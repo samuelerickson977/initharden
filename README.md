@@ -11,7 +11,7 @@ line parameters to grub.
 Run the following commands to get quickly started:
 ```bash
 chmod +x harden.sh
-sudo ./harden.sh
+./harden.sh
 ```
 
 ### Harden Kernel Command Line Parameters
