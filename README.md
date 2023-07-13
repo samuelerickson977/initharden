@@ -4,8 +4,8 @@
 ### Description
 initharden is a project aimed at quickly hardening Ubuntu 22.04
 x86-64. One can quickly harden their new OS install by running 
-the `harden.sh` and adding the recommended kernel command line 
-parameters to grub.
+the `harden.sh` script and adding the recommended kernel command 
+line parameters to grub.
 
 ### Quick Start
 Run the following commands to get quickly started:
