@@ -25,7 +25,7 @@ intel_iommu=on,strict iommu=force,nobypass,nopt iommu.passthrough=0
 intremap=on iomem=strict iommu.forcedac=1 iommu.strict=1 
 sysctl.kernel.kexec_load_disabled=1 pti=on page_poison=1 slub_debug=FZP 
 hardened_usercopy=on disable_ipv6=1 slab_nomerge init_on_free=1 init_on_alloc=1 
-lsm=lockdown,landlock,yama,apparmor vsyscall=none random.trust_cpu=on 
+lsm=landlock,yama,apparmor vsyscall=none random.trust_cpu=on 
 page_alloc.shuffle=1 module.sig_enforce=1 ipv6.disable=1 
 module_blacklist='ipv6,firewire,firewire-core,can,atm,mei,dccp,sctp,rds,tipc,
 n-hdlc,ax25,netrom,x25,rose,decnet,econet,af_802154,ipx,appletalk,psnap,p8023,
