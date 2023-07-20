@@ -46,5 +46,25 @@ A reboot is required for the changes to take effect.
 See https://www.kernel.org/doc/html/v4.14/admin-guide/kernel-parameters.html 
 for more details.
 
+### More Software
+#### Intrusion Detection Systems
+I have found both snort and suricata very useful in the past. Snort is more
+of an intrusion detection system (IDS), while suricata is also capable
+of being an intrusion prevention system (IPS). Suricata supports higher
+traffic throughput due to its multi-threading capabilities. However,
+this functionality also makes suricata more complex than snort, and
+snort is also more of a mature product.
+
+The nice thing about suricata is that it can also be used in specialized
+environments that make traffic inspection even faster. I have personally
+used suricata with a Myricom NIC that is able to offload some traffic
+inspection to the NIC itself. I was able to adequately inspect all traffic
+using all available rules while maintaining an 800 Mbps internet connection
+speed.
+
+More information about suricata and snort can be found at:
+- https://suricata.io/
+- https://www.snort.org/
+
 ### Contributing
 Suggestions and pull requests are always welcomed and appreciated.
